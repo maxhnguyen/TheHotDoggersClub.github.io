@@ -33,9 +33,17 @@
 				<section id="banner">
 					<div class="content">
 						<header>
-							<h2>SORRY BUSTER!!!</h2>
-							<br>
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/Ju8Nz2cmCp0?autoplay=1" frameborder="0" allowfullscreen></iframe>
+<iframe id="video" src="//www.youtube.com/embed/pa-dGYjSq5k" frameborder="0" allowfullscreen></iframe>
+
+
+$(function(){
+  $('#video').css({ width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px' });
+
+  // If you want to keep full screen on window resize
+  $(window).resize(function(){
+    $('#video').css({ width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px' });
+  });
+});
 
 						</header>
 					</div>
